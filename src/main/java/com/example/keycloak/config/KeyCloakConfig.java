@@ -14,8 +14,8 @@ public class KeyCloakConfig {
     @Value("${keycloak.resource}")
     private String adminClientId;
 
-    @Value("${keycloak.credentials.secret}")
-    private String adminClientSecret;
+   /* @Value("${keycloak.credentials.secret}")
+    private String adminClientSecret;*/
 
     @Value("${keycloak.auth-server-url}")
     private String authServerUrl;
@@ -35,7 +35,7 @@ public class KeyCloakConfig {
                 .serverUrl(authServerUrl)
                 .realm(realm)
                 .clientId(adminClientId)
-                .clientSecret(adminClientSecret)
+               // .clientSecret(adminClientSecret)
                 .username(adminUsername)
                 .password(adminPassword)
                 .grantType("password")
